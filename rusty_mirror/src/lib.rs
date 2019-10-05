@@ -8,6 +8,7 @@ use palette::blend::{Equations, Parameter};
 extern crate image;
 use image::{ImageBuffer, Rgba};
 
+// Matrices for incidence and propagation through media
 fn d_e(n:&f32, theta:&f32) -> Matrix2<Complex<f32>> {
     Matrix2::new(Complex::new(1.0, 0.0), Complex::new(1.0, 0.0), n*theta.cos()*Complex::new(1.0, 0.0), -1.0*n*theta.cos()*Complex::new(1.0,0.0) )
 }
@@ -22,6 +23,7 @@ fn p_mat(n:&f32, d:&f32, lambda:&f32, theta:&f32) -> Matrix2<Complex<f32>> {
     Matrix2::new((k*d*Complex::new(0.0,1.0)).exp(), Complex::new(0.0, 0.0), Complex::new(0.0, 0.0), (-1_f32*k*d*Complex::new(0.0,1.0)).exp())
 }
 
+// make some math easier for later
 fn matrix_power(matr: Matrix2<Complex<f32>>, powr: u32) -> Matrix2<Complex<f32>>{
     let mut fin = matr;
     let mut count = powr;
@@ -33,6 +35,7 @@ fn matrix_power(matr: Matrix2<Complex<f32>>, powr: u32) -> Matrix2<Complex<f32>>
     fin
 }
 
+// make the mirror stack of materials
 fn mirror(n1:&f32, n2:&f32, d1:&f32, d2:&f32, d_sub:&f32, total_layers:&u32, polarization:&bool, lambda:&f32) -> Matrix2<Complex<f32>> {
     let theta1 = (45.0_f32.sin()/n1).asin();
     let theta2 = (n1*theta1.sin()/n2).asin();
@@ -66,7 +69,7 @@ fn mirror(n1:&f32, n2:&f32, d1:&f32, d2:&f32, d_sub:&f32, total_layers:&u32, pol
     }
 }
 
-
+// determine reflectivity
 fn reflect(n1:&f32, n2:&f32, d1:&f32, d2:&f32, d_sub:&f32, total_layers:&u32, polarization:&bool, lambda:&f32) -> f32 {
     // Finiding the intensity of reflected light from the reflection matrix "r"
     let r = mirror(n1,n2,d1,d2,d_sub,total_layers,polarization,lambda);
@@ -82,6 +85,7 @@ fn reflect(n1:&f32, n2:&f32, d1:&f32, d2:&f32, d_sub:&f32, total_layers:&u32, po
 
     // rgba 
 }
+// determine transmittivity (1 - reflectivity)
 fn transmit(n1:&f32, n2:&f32, d1:&f32, d2:&f32, d_sub:&f32, total_layers:&u32, polarization:&bool, lambda:&f32) -> f32 {
     let r = reflect(n1,n2,d1,d2,d_sub,total_layers,polarization,lambda);
     let t = 1.0 - r;
@@ -89,6 +93,8 @@ fn transmit(n1:&f32, n2:&f32, d1:&f32, d2:&f32, d_sub:&f32, total_layers:&u32, p
     t
 }
 
+// to improve from the Julia implementation, I thought to show colors instead of just an intensity spectrum
+// so I take the colors in rgb to be able to blend the spectrum into a color
 fn wavelength_to_rgba(wavelength:f32, alpha:f32) -> LinSrgba<f32> {
     let gamma = 0.8;    // IDK what this gamma is but it is kinda important?
     let r:f32;
@@ -125,22 +131,11 @@ fn wavelength_to_rgba(wavelength:f32, alpha:f32) -> LinSrgba<f32> {
         g = 0.0;
         b = 0.0;
     }
-    // r *= 255.0;
-    // g *= 255.0;
-    // b *= 255.0;
-
-    // let red = r as u8;
-    // let green = g as u8;
-    // let blue = b as u8;
-
-    // let mut alpha_ii = alpha_i;
-    // alpha_ii *= 255.0;
-    // let alpha = alpha_ii as u8;
 
     LinSrgba::new(r, g, b, alpha)
 }
 
-
+// function for each combination of TE, TM with Reflection, Transmission
 pub fn elec_pol_reflect(n1:&f32, n2:&f32, d1:&f32, d2:&f32, d_sub:&f32, total_layers:&u32) -> [u8; 4] {
     let mut _elec_colr: LinSrgba<f32> = LinSrgba::new(0.0, 0.0, 0.0, 0.0);
     let blend_mode = Equations::from_parameters(
@@ -218,7 +213,8 @@ pub fn magn_pol_transmit(n1:&f32, n2:&f32, d1:&f32, d2:&f32, d_sub:&f32, total_l
     magn
 }
 
-
+// make an image with quadrants showing the color expected from each combination of TE, TM with Reflection, Transmission
+// TODO: Need labels on the image, as of right now, it requires having read the code to know what is what :(
 pub fn quad_show(n1:&f32, n2:&f32, d1:&f32, d2:&f32, d_sub:&f32, total_layers:&u32) {
     let width: u32 = 400;
     let height: u32 = 400;
