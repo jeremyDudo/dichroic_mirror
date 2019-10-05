@@ -1,0 +1,12 @@
+/Users/dudo/Documents/code/dichroic_mirror/rusty_mirror/target/debug/deps/num_bigint-2adf66440dbca61f.rmeta: /Users/dudo/.cargo/registry/src/github.com-1ecc6299db9ec823/num-bigint-0.2.3/src/lib.rs /Users/dudo/.cargo/registry/src/github.com-1ecc6299db9ec823/num-bigint-0.2.3/src/macros.rs /Users/dudo/.cargo/registry/src/github.com-1ecc6299db9ec823/num-bigint-0.2.3/src/bigint.rs /Users/dudo/.cargo/registry/src/github.com-1ecc6299db9ec823/num-bigint-0.2.3/src/biguint.rs /Users/dudo/.cargo/registry/src/github.com-1ecc6299db9ec823/num-bigint-0.2.3/src/algorithms.rs /Users/dudo/.cargo/registry/src/github.com-1ecc6299db9ec823/num-bigint-0.2.3/src/monty.rs
+
+/Users/dudo/Documents/code/dichroic_mirror/rusty_mirror/target/debug/deps/libnum_bigint-2adf66440dbca61f.rlib: /Users/dudo/.cargo/registry/src/github.com-1ecc6299db9ec823/num-bigint-0.2.3/src/lib.rs /Users/dudo/.cargo/registry/src/github.com-1ecc6299db9ec823/num-bigint-0.2.3/src/macros.rs /Users/dudo/.cargo/registry/src/github.com-1ecc6299db9ec823/num-bigint-0.2.3/src/bigint.rs /Users/dudo/.cargo/registry/src/github.com-1ecc6299db9ec823/num-bigint-0.2.3/src/biguint.rs /Users/dudo/.cargo/registry/src/github.com-1ecc6299db9ec823/num-bigint-0.2.3/src/algorithms.rs /Users/dudo/.cargo/registry/src/github.com-1ecc6299db9ec823/num-bigint-0.2.3/src/monty.rs
+
+/Users/dudo/Documents/code/dichroic_mirror/rusty_mirror/target/debug/deps/num_bigint-2adf66440dbca61f.d: /Users/dudo/.cargo/registry/src/github.com-1ecc6299db9ec823/num-bigint-0.2.3/src/lib.rs /Users/dudo/.cargo/registry/src/github.com-1ecc6299db9ec823/num-bigint-0.2.3/src/macros.rs /Users/dudo/.cargo/registry/src/github.com-1ecc6299db9ec823/num-bigint-0.2.3/src/bigint.rs /Users/dudo/.cargo/registry/src/github.com-1ecc6299db9ec823/num-bigint-0.2.3/src/biguint.rs /Users/dudo/.cargo/registry/src/github.com-1ecc6299db9ec823/num-bigint-0.2.3/src/algorithms.rs /Users/dudo/.cargo/registry/src/github.com-1ecc6299db9ec823/num-bigint-0.2.3/src/monty.rs
+
+/Users/dudo/.cargo/registry/src/github.com-1ecc6299db9ec823/num-bigint-0.2.3/src/lib.rs:
+/Users/dudo/.cargo/registry/src/github.com-1ecc6299db9ec823/num-bigint-0.2.3/src/macros.rs:
+/Users/dudo/.cargo/registry/src/github.com-1ecc6299db9ec823/num-bigint-0.2.3/src/bigint.rs:
+/Users/dudo/.cargo/registry/src/github.com-1ecc6299db9ec823/num-bigint-0.2.3/src/biguint.rs:
+/Users/dudo/.cargo/registry/src/github.com-1ecc6299db9ec823/num-bigint-0.2.3/src/algorithms.rs:
+/Users/dudo/.cargo/registry/src/github.com-1ecc6299db9ec823/num-bigint-0.2.3/src/monty.rs:

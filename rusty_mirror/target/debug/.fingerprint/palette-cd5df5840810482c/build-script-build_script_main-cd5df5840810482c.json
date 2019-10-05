@@ -1,0 +1,1 @@
+{"rustc":18183863943228103741,"features":"[\"default\", \"named\", \"named_from_str\", \"phf\", \"phf_codegen\"]","target":1549943918372116673,"profile":9935990280773120926,"path":10535199090033810307,"deps":[[15579738495984062164,"phf_codegen",false,16793551237071609477]],"local":[{"Precalculated":"0.4.1"}],"rustflags":[],"metadata":8366166185486208918}
