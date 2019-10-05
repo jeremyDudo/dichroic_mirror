@@ -73,7 +73,7 @@ function r_plot(n1,n2,d1,d2,dSub,totalLayers,Polarization,λ)
     # plot it
     plot(λ, y, ylims=(-0.1, 1.1), title="Reflectivity of $Polarization Polarized Light", xlabel="Wavelength [nm]", ylabel="Intensity [%]")
 
-    savefig("reflectivity_" * "$Polarization" * ".pdf")
+    savefig("reflectivity_" * "$Polarization" * ".png")
 end
 #-------------------------------------------------------------------------------------------
 # TEST
@@ -82,6 +82,6 @@ end
 λ = 400:0.1:700;
 
 # reflectivity 
-r_plot(1.46, 4.6, 52, 52, 1000, 21, "TE", λ);
+r_plot(1.46, 4.6, 52, 52, 1000, 21, "TM", λ);
 
 
