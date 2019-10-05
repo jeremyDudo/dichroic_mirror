@@ -1,0 +1,14 @@
+[package]
+name = "rusty_mirror"
+version = "0.1.0"
+authors = ["jeremyDudo <jmdudo2@gmail.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+nalgebra = "0.18.0"
+num = "0.2.0"
+rgb = "0.8"
+palette = "0.4"
+image = "0.22.1"

@@ -1,6 +1,5 @@
 using LinearAlgebra, Plots
 
-
 #-------------------------------------------------------------------------------------------
 # FUNCTIONS 
 
@@ -77,7 +76,7 @@ function r_plot(n1,n2,d1,d2,dSub,totalLayers,Polarization,λ)
     savefig("reflectivity_" + "$Polarization" + ".pdf")
 end
 #-------------------------------------------------------------------------------------------
-# TEST VARIABLES
+# TEST
 
 # nm wavelength over visible spectrum
 λ = 400:0.1:700;
