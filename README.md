@@ -6,8 +6,8 @@ For a class (3.024 @ MIT) I had to model a dichroic mirror by representing the m
 Julia generates graphs of reflectance vs wavelength
 
 
-![](reflectivity_TE.pdf)
-![](reflectivity_TM.pdf)
+![](reflectivity_TE.png)
+![](reflectivity_TM.png)
 
 
 ## Rust Output
