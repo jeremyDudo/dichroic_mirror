@@ -11,7 +11,7 @@ Julia generates graphs of reflectance vs wavelength
 
 
 ## Rust Output
-Rust generates an image of the colors that would be seen @
+Rust generates an image of the colors that would be seen 
 
 | TE_reflected | TE_transmitted |
 |--------------|----------------|
