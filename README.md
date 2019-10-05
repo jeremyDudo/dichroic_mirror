@@ -4,12 +4,12 @@ For a class (3.024 @ MIT) I had to model a dichroic mirror by representing the m
 
 # Julia Output
 Julia generates graphs of reflectance vs wavelength
-![](reflectivity_TE.pdf)
-![](reflectivity_TM.pdf)
+![](reflectivity_TE.png)
+![](reflectivity_TM.png)
 
 
 # Rust Output
-Rust generates an image of the colors that would be seen @
-TE_reflect    TE_transmitted
-TM_reflected  TM_transmitted
+Rust generates an image of the colors that would be seen @ \\
+TE_reflect &   TE_transmitted \\
+TM_reflected & TM_transmitted
 ![](rusty_mirror/output.png)
